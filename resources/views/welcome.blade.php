@@ -17,13 +17,15 @@
                     <div class="row">
                         <div class="col text-center">
 
-                            <div class="card">
+                            <div class="card ">
                                 <div class="card-body">
                                     
 
-                                    <h1 class="card-title">{{$movie ->$title}}</h1>
-                                    <h3class="card-title">{{$movie ->$original_title}}</h3>
-                                    <p>{{$movie->$nationality}},{{$movie->$date}},{{$movie->$vote}}</p>
+                                    <h1 class="card-title"> Titolo film:{{$movie ->title}}</h1>
+                                    <h5 class="card-title">Titolo originale:{{$movie ->original_title}}</h5>
+                                    <p>Nazionalità: {{$movie->nationality}}</p>
+                                    <p>Data di uscita: {{$movie->date}}</p>
+                                    <p>Votofilm: {{$movie->vote}}</p>
                                 </div>
                             </div>
 
