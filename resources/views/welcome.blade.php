@@ -12,21 +12,25 @@
     <body>
 
         <main>
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
+            @foreach($movies as $movie)
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
 
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="{{ Vite::asset('resources/img/laravel.png') }}" alt="">
+                            <div class="card">
+                                <div class="card-body">
+                                    
 
-                                <h1 class="card-title">Laravel 9 + Bootstrap Template</h1>
+                                    <h1 class="card-title">{{$movie ->$title}}</h1>
+                                    <h3class="card-title">{{$movie ->$original_title}}</h3>
+                                    <p>{{$movie->$nationality}},{{$movie->$date}},{{$movie->$vote}}</p>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </main>
 
     </body>
